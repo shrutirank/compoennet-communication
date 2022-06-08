@@ -1,0 +1,20 @@
+
+
+<!-- <app-users  [hero]="data.name"></app-users>-->
+
+ <h3>my parent component</h3>
+
+
+<input [(ngModel)]="parentTxtValue" type="text">
+
+<button type="button"(click)="onParent()">parent</button> 
+  <div class="text">value of child:{{ childTextboxvalue}}</div>
+
+
+
+
+<div class="child">
+<h3>my child component</h3>
+<app-users [parentText]="parentTxtValue"  [parentClick]="parentClick"
+(onTextFromChild)="updateinchildvalue($event)"></app-users>
+</div>
